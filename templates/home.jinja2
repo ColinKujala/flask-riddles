@@ -1,0 +1,9 @@
+{% extends 'base.jinja2' %}
+
+{% block subtitle %}Can you solve the riddle?{% endblock subtitle %}
+
+{% block content %}
+    <h3>{{ riddle["riddle"] }}</h3>
+    
+    <p><b>Aswer:</b> {{ riddle["answer"] }}</p>
+{% endblock content %}
