@@ -5,5 +5,34 @@
 {% block content %}
     <h3>{{ riddle["riddle"] }}</h3>
     
-    <p><b>Answer:</b> {{ riddle["answer"] }}</p>
+    <div id="shown_answer">
+        <p><b>Answer:</b> {{ riddle["answer"] }}</p>
+        <button onclick="toggleanswer()">
+            Hide Answer
+        </button>
+    </div>
+    <div id="hidden_answer">
+        <button onclick="toggleanswer()">
+            Show Answer
+        </button>
+    </div>
+    <script>
+        window.onload = function() {
+            document.getElementById("shown_answer").style.display = "none";
+            document.getElementById("hidden_answer").style.display = "block";
+        };
+    </script>
+    <script>
+        function toggleanswer() {
+            const shown_answer_div = document.getElementById("shown_answer");
+            const hidden_answer_div = document.getElementById("hidden_answer");
+            if (shown_answer_div.style.display.toString() === "none") {
+                shown_answer_div.style.display = "block";
+                hidden_answer_div.style.display = "none";
+            } else {
+                shown_answer_div.style.display = "none";
+                hidden_answer_div.style.display = "block";
+            }
+        }
+    </script>
 {% endblock content %}
