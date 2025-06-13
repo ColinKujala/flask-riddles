@@ -4,8 +4,15 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 </head>
 <body>
-	<h1>Random Riddle</h1>
-	<h2>{% block subtitle %} {% endblock subtitle %}</h2>
-	{% block content %} {% endblock content %}
+	<div class="page-container">
+		<div class="main-content">
+			<h1>Random Riddle</h1>
+			<h2>{% block subtitle %} {% endblock subtitle %}</h2>
+			{% block content %} {% endblock content %}
+		</div>
+		<footer>
+			Riddles sourced from riddles-api.vercel.app
+		</footer>
+	</div>
 </body>
 </html>

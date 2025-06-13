@@ -1,17 +1,24 @@
 body {
-    margin: 20px;
-    padding: 10px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     background-image: url('/static/img/question_background.jpg');
     background-size: cover;
 }
-/*
- * Formatting the header area
- */
-header {
-    background-color: #DFB887;
-    height: 35px;
+
+.page-container {
+    position: relative;
+    min-height: 95vh;
+}
+
+.main-content {
+    margin: 20px;
+    padding: 10px;
+    padding-bottom: 2.5rem;  /* Footer height */
+}
+
+footer {
+    position: absolute;
+    text-align: center;
     width: 100%;
-    opacity: .9;
-    margin-bottom: 10px;
+    bottom: 0;
+    height: 2.5rem;  /* Footer height */
 }
